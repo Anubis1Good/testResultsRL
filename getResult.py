@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-cur_name = '01.03.2024d'
+cur_name = '10.03.2025d'
 raw_folder = 'testResults/onlineTests/'
 raw_folder = os.path.join(raw_folder,cur_name)
 result_name = raw_folder.split('/')[-1]

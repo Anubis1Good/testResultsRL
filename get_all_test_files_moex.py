@@ -1,13 +1,13 @@
 import os
 import shutil
 
-all_test_folder = 'all_test_results'
+all_test_folder = 'all_test_result/all_test_results_moex'
 
 if not os.path.exists(all_test_folder):
-    os.mkdir(all_test_folder)
+    os.makedirs(all_test_folder)
 
 
-folders = ('total_files','otherResult')
+folders = ('otherResult/moex',)
 count = 0
 def get_inner(path_folder):
     global count

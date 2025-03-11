@@ -3,6 +3,9 @@ import pandas as pd
 
 
 raw_folder = 'all_test_results'
+# prefix = '_moex'
+prefix = '_bitget'
+raw_folder += prefix
 raw_files = os.listdir(raw_folder)
 df1 = None
 for i,rw in enumerate(raw_files):
@@ -24,7 +27,7 @@ for col in df1.columns:
 result = df1.groupby('name').sum()
 result = result.sort_values(by='total_average_fee_percent',axis=0,ascending=False)
 result = result.reset_index()
-file_name = 'Total_All_Test_Result.xlsx'
+file_name = f'Total_All_Test_Result_{prefix}.xlsx'
 
 with pd.ExcelWriter(file_name, engine='xlsxwriter') as writer:  
     result.to_excel(writer,sheet_name='total')

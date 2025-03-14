@@ -1,11 +1,12 @@
 import os
 import pandas as pd
 
-
+parent_folder = 'all_test_result'
 raw_folder = 'all_test_results'
-# prefix = '_moex'
-prefix = '_bitget'
+prefix = '_moex'
+# prefix = '_bitget'
 raw_folder += prefix
+raw_folder = os.path.join(parent_folder,raw_folder)
 raw_files = os.listdir(raw_folder)
 df1 = None
 for i,rw in enumerate(raw_files):

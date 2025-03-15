@@ -5,6 +5,9 @@ all_test_folder = 'all_test_result/all_test_results_moex'
 
 if not os.path.exists(all_test_folder):
     os.makedirs(all_test_folder)
+else:
+    shutil.rmtree(all_test_folder)
+    os.makedirs(all_test_folder)
 
 
 folders = ('otherResult/moex',)
